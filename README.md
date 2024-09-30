@@ -4,9 +4,9 @@
 How to run the simulator: 
     ```cpp
     g++ -std=c++20 main.cpp -o scheduler       
-    ./scheduler
+    
     ```
-
+`./scheduler`
 
 ### Default Value without user flag
 - **0 is the highest Level priority, the number of queue is the lowest priority**
