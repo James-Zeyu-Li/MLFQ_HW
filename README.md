@@ -4,15 +4,8 @@
 How to run the simulator: 
     ```cpp
     g++ -std=c++20 main.cpp -o scheduler       
+    ./scheduler
     ```
-
-Some Test Cases
-
-`./scheduler`
-
-`./scheduler -n 6 -Q 1,2,3,4,5 -A 2,4,6,8,20 -b 20 -j "1,0,10;2,0,5;3,19,10;4,14,20"`
-
-`./scheduler -n 6 -Q 1,2,3,4,5 -A 2,4,6,8,20 -b 20 -j "1,0,10;2,0,5;3,19,10"`
 
 
 ### Default Value without user flag
