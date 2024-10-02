@@ -322,7 +322,7 @@ void runSimulation(const Options& options) {
 
         // Determine the time slice
         int quantum = quantumList[q];
-        int timeSlice = min(quantum, job.remainingTime);
+        int timeSlice = min({quantum, job.remainingTime, job.allotLeft});
         int timeUsed = 0;
 
         // Execute the job for the time slice
@@ -431,7 +431,7 @@ int main(int argc, char* argv[]) {
     // Set boostTime from user-specified option
     boostTime = options.boostTime;
 
-    // If a random seed is set (not used in this version, but kept for potential extensions)
+    // If a random seed is set (not used )
     if (options.seed != 0) {
         srand(options.seed);
     }
