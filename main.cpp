@@ -35,7 +35,7 @@ int numQueues;
 int currentTime = 0;
 int nextBoost = 0;
 
-// Command-line option structure
+// Command-line option structure, use to transfer command-line arguments
 struct Options {
     // Simulation parameters
     int seed = 0;
@@ -237,7 +237,7 @@ int FindQueue() {
 void boostAllQueues() {
     // Move all jobs back to the highest priority queue
     cout << "Boosting all jobs to highest priority at time " << currentTime << endl;
-    for (int q = 0; q <= hiQueue; q++) {
+    for (int q = 1; q <= hiQueue; q++) {
         while (!queues[q].empty()) {
             int jobId = queues[q].front();
             queues[q].pop();
